@@ -1,6 +1,6 @@
 package net.gunpowderplus.mod;
 
-import net.gunpowderplus.mod.blocks.OreBlock;
+import net.gunpowderplus.mod.blocks.*;
 import net.gunpowderplus.mod.items.GPItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -48,9 +48,9 @@ public class gunpowderPlus {
 		GameRegistry.registerItem(itemSaltPeter, "SaltPeter");
 		
 		//blocks registry
-		blockSulfurDeposit = new OreBlock(Material.rock).setBlockName("SulfurDeposit");
+		blockSulfurDeposit = new SulfurDeposit(Material.rock).setBlockName("SulfurDeposit");
 		GameRegistry.registerBlock(blockSulfurDeposit, "SulfurDeposit");
-		blockSaltPeterDeposit = new OreBlock(Material.rock).setBlockName("SaltPeterDeposit");
+		blockSaltPeterDeposit = new SaltPeterDeposit(Material.rock).setBlockName("SaltPeterDeposit");
 		GameRegistry.registerBlock(blockSaltPeterDeposit, "SaltPeterDeposit");
 	}
 	

@@ -22,26 +22,6 @@ public class OreBlock extends Block {
 		this.setCreativeTab(gunpowderPlus.gunpowderPlusTab);
 	}
 	
-	public Item getItemDropped(int i, Random random, int j){
-		if(this == gunpowderPlus.blockSulfurDeposit){
-			return gunpowderPlus.itemSulfur;
-		}else if(this == gunpowderPlus.blockSaltPeterDeposit){
-			return gunpowderPlus.itemSaltPeter;
-		}
-		
-		return Item.getItemFromBlock(this);
-	}
-	
-	public int quantityDropped(Random random) {
-		if(this == gunpowderPlus.blockSulfurDeposit){
-			return 1 + random.nextInt(2);
-		}else if(this == gunpowderPlus.blockSaltPeterDeposit){
-			return 1 + random.nextInt(2);
-		}
-		
-		return 1;
-	}
-	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.blockIcon = iconRegister.registerIcon(gunpowderPlus.modid + ":" + this.getUnlocalizedName().substring(5));
