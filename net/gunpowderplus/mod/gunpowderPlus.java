@@ -5,6 +5,7 @@ import net.gunpowderplus.mod.items.GPItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
@@ -57,7 +58,7 @@ public class gunpowderPlus {
 	public void init(FMLInitializationEvent event){
 		
 		//Recipes
-		GameRegistry.addRecipe(new ItemStack(Item.getItemById(289), 3), new Object[]{"###","#C#","S#P", 'S', itemSulfur, 'C' , Item.getItemById(263), 'P', itemSaltPeter});
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.gunpowder), new Object[]{itemSulfur, itemSaltPeter, new ItemStack(Items.coal, 1, 1)});
 		
 		//smelting
 		
